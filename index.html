@@ -569,16 +569,14 @@ function addGlobe() {
 	canvasContext.rect(0, 0, canvasSize, canvasSize);
 	var canvasGradient = canvasContext.createLinearGradient(0, 0, 0, canvasSize);
 	canvasGradient.addColorStop(0, '#000000');
-	canvasGradient.addColorStop(0.5, '#260F76');
+	canvasGradient.addColorStop(0.5, '#000000');
 	canvasGradient.addColorStop(1, '#000000');
 	canvasContext.fillStyle = canvasGradient;
 	canvasContext.fill();
 
 	// Make texture
 	var texture = new THREE.Texture(textureCanvas);
-	texture.needsUpdate = true;
-
-	var geometry = new THREE.SphereGeometry(radius, segments, rings);
+	texture.needsUpdate = true;'
 	var material = new THREE.MeshBasicMaterial({
 		map: texture,
 		transparent: true,
