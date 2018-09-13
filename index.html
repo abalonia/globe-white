@@ -576,7 +576,9 @@ function addGlobe() {
 
 	// Make texture
 	var texture = new THREE.Texture(textureCanvas);
-	texture.needsUpdate = true;'
+	texture.needsUpdate = true;
+
+	var geometry = new THREE.SphereGeometry(radius, segments, rings);
 	var material = new THREE.MeshBasicMaterial({
 		map: texture,
 		transparent: true,
